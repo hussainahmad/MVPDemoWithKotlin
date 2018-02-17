@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.2.21'
     repositories {
         google()
         jcenter()
@@ -25,3 +25,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+subprojects {
+    ext.support = "27.0.3"
+    ext.playServices = "11.8.0"
+}
+

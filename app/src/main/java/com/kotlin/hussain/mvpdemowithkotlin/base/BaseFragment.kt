@@ -12,12 +12,6 @@ import android.view.inputmethod.InputMethodManager
  */
 public abstract class BaseFragment: Fragment() {
 
-
-
-
-
-
-
     protected fun hideKeyboard() {
         if (activity != null) {
             val view = activity!!.currentFocus

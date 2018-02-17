@@ -8,13 +8,19 @@ android {
     signingConfigs {
         debug {
             keyAlias 'KotlinMVP'
+            keyPassword 'android'
+            storeFile file('debug-keystore.jks')
+            storePassword 'android'
+        }
+        release {
+            keyAlias 'KotlinMVP'
             keyPassword 'kotlin'
-            storeFile file('releaseKeyStore.jks')
+            storeFile file('release-keystore.jks')
             storePassword 'kotlin'
         }
     }
     compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.kotlin.hussain.mvpdemowithkotlin"
         minSdkVersion 19
@@ -24,9 +30,15 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
@@ -40,4 +52,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    mplementation "com.android.support:appcompat-v7:${support}"
+    implementation "com.android.support:recyclerview-v7:${support}"
+    implementation "com.android.support:cardview-v7:${support}"
 }
