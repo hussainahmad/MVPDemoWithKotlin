@@ -9,7 +9,6 @@ package com.kotlin.hussain.mvpdemowithkotlin.base
 public class BasePresenter<T:MvpView>: Presenter<T>{
 
     private var mvpView: T? = null
-//    protected var mNetworkFragment: NetworkFragment? = null
 
     override fun attachView(mvpView: T) {
 
