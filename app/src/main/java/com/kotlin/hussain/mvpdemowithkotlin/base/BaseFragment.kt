@@ -1,3 +1,8 @@
+/*
+ * MVP Demo With Kotlin
+ * Copyright (c) 2018 TrueTechnology. This program is free software: you can redistribute it and/or modify it under the terms of the  Apache License Version 2.0, January 2004.
+ */
+
 package com.kotlin.hussain.mvpdemowithkotlin.base
 
 import android.content.Context
