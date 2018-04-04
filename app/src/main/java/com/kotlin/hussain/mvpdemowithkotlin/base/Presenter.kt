@@ -12,5 +12,5 @@ package com.kotlin.hussain.mvpdemowithkotlin.base
  */
 interface Presenter<V : MvpView> {
     fun attachView(mvpView: V)
-    fun deattachView()
+    fun detachView()
 }

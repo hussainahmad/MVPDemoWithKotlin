@@ -11,7 +11,7 @@ package com.kotlin.hussain.mvpdemowithkotlin.base
  * hussain.ahmad5539@gmail.com
  * on 27-Jan-18.
  */
-public class BasePresenter<T:MvpView>: Presenter<T>{
+public open class BasePresenter<T : MvpView> : Presenter<T> {
 
     private var mvpView: T? = null
 
@@ -20,7 +20,7 @@ public class BasePresenter<T:MvpView>: Presenter<T>{
         this.mvpView = mvpView
     }
 
-    override fun deattachView() {
+    override fun detachView() {
         mvpView = null
     }
 

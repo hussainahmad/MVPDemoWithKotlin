@@ -3,21 +3,19 @@
  * Copyright (c) 2018 TrueTechnology. This program is free software: you can redistribute it and/or modify it under the terms of the  Apache License Version 2.0, January 2004.
  */
 
-package com.kotlin.hussain.mvpdemowithkotlin.communication
+package com.kotlin.hussain.mvpdemowithkotlin.home
 
-import com.kotlin.hussain.mvpdemowithkotlin.model.Flower
-import io.reactivex.Observable
-import retrofit2.http.GET
+import com.kotlin.hussain.mvpdemowithkotlin.base.BasePresenter
 
 /**
  * Created by Hussain Sherwani
  * hussain.ahmad5539@gmail.com
  * on 4/4/2018.
  */
-interface ServiceCall {
+class MainPresenter : BasePresenter<MainMVP>() {
 
-    @GET(Constants.END_POINT)
-    fun getFlower():
-            Observable<Flower>
 
+    override fun detachView() {
+        super.detachView()
+    }
 }
